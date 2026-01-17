@@ -1,5 +1,5 @@
 # Use a robust base image (avoid Alpine for Agent compatibility)
-# Container Name: antigravity
+# Container Name: stlab-linbox-antigravity
 FROM ubuntu:22.04
 
 # 1. Install dependencies required for the Antigravity Server installer

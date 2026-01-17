@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AntigravityAgent</Name>
+  <Repository>315h/antigravity-agent-box</Repository>
+  <Registry>https://hub.docker.com/r/315h/antigravity-agent-box</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Headless Antigravity Server Agent.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3501]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver-io-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1737150109</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Headless Antigravity Server Agent.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3501</HostPort>
+        <ContainerPort>3501</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/antigravity-workspace</HostDir>
+      <ContainerDir>/workspace</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Web Port" Target="3501" Default="3501" Mode="tcp" Description="Container Port: 3501" Type="Port" Display="always" Required="true" Mask="false">3501</Config>
+  <Config Name="Workspace" Target="/workspace" Default="/mnt/user/appdata/antigravity-workspace" Mode="rw" Description="Container Path: /workspace" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/antigravity-workspace</Config>
+</Container>
