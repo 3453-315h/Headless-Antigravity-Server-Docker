@@ -34,5 +34,5 @@ EXPOSE 3501
 
 # 6. Keep the container running indefinitely so we can attach to it
 # 6. Copy the server script and start it
-COPY server.py /workspace/server.py
-CMD ["python3", "/workspace/server.py"]
+COPY server.py /root/server.py
+CMD ["python3", "/root/server.py"]
